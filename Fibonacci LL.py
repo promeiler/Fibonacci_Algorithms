@@ -24,10 +24,8 @@ class Node:
         self.next_node = new_next_node
         
 class FibonacciList:
-    def __init__(self, n):
-        fibonacci_0 = Node(0)
-        fibonacci_1 = Node(1, fibonacci_0)
-        self.head_node = fibonacci_1
+    def __init__(self, n, head_node = None):
+        self.head_node = head_node
         while n > 1:
             self.add_to_head()
             n -= 1
